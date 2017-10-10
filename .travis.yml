@@ -7,7 +7,7 @@ before_install:
   - for i in base astaire cassandra chronos bono ellis homer homestead homestead-prov ralf sprout ; do docker build -t "$DOCKER_USERNAME"/$i $i ; done
   - docker image ls 
 
-after_success:
+script:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
       docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
       for i in base astaire cassandra chronos bono ellis homer homestead homestead-prov ralf sprout ; docker push "$DOCKER_USERNAME"/$i; done

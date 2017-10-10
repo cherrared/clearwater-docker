@@ -13,13 +13,13 @@ services:
       -initial-cluster etcd0=http://etcd:2380
       -initial-cluster-state new
   astaire:
-    build: astaire
+    image: sofianinho/astaire
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   chronos:
-    build: chronos
+    image: sofianinho/chronos
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
@@ -27,13 +27,13 @@ services:
   cassandra:
     sysctls:
        net.ipv6.conf.lo.disable_ipv6: 0
-    build: cassandra
+    image: sofianinho/cassandra
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   bono:
-    build: bono
+    image: sofianinho/bono
     environment:
       - PUBLIC_IP
       - ADDITIONAL_SHARED_CONFIG
@@ -45,37 +45,37 @@ services:
       - "5060:5060/udp"
       - "5062:5062"
   sprout:
-    build: sprout
+    image: sofianinho/sprout
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   homestead:
-    build: homestead
+    image: sofianinho/homestead
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   homestead-prov:
-    build: homestead-prov
+    image: sofianinho/homestead-prov
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   homer:
-    build: homer
+    image: sofianinho/homer
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   ralf:
-    build: ralf
+    image: sofianinho/ralf
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   ellis:
-    build: ellis
+    image: sofianinho/ellis
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:

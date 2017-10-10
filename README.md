@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/sofianinho/clearwater-docker.svg?branch=master)](https://travis-ci.org/sofianinho/clearwater-docker)
-[![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/sofianinho/clearwater-docker/master/minimal-distributed.yaml&stack_name=clearwater)
+[![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/sofianinho/clearwater-docker/master/docker-compose.yml&stack_name=clearwater)
 
 
 # Clearwater Docker

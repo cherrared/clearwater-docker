@@ -8,11 +8,4 @@ before_install:
   - docker image ls 
 
 script:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then \
-      docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; \
-      for i in base astaire cassandra chronos bono ellis homer homestead homestead-prov ralf sprout ; docker push "$DOCKER_USERNAME"/$i; done; \
-      docker logout; \
-    fi
-
-  
-
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; for i in base astaire cassandra chronos bono ellis homer homestead homestead-prov ralf sprout ; docker push "$DOCKER_USERNAME"/$i; done; docker logout; fi
